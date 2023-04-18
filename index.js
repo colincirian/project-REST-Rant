@@ -13,10 +13,3 @@ app.get('*', (req, res) => {
 })
 
 app.listen(process.env.PORT)
-
-const router = require('express').Router()
-router.get('/places', (req, res) => {
-    res.send('GET /places')
-})
-
-module.exports = router
