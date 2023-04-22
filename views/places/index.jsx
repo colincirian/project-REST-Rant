@@ -26,6 +26,9 @@ function index (data) {
     <Def>
         <main>
             <h1>Places to Rant or Rave About</h1>
+            <h3>Rating</h3>
+            <h3>Description</h3>
+            <footer>Comments</footer>
             <div className="row">
               {placesFormatted}
             </div>
