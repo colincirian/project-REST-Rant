@@ -17,7 +17,7 @@ router.post('/', (req, res) => {
     }
     if(!req.body.city){
       //default city if one is not provided
-      req.body.city = 'Anytown'
+      req.body.city = ''
     }
     if(!req.body.state){
       //default state if one is not provided
