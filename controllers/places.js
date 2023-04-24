@@ -50,10 +50,6 @@ router.get('/:id/edit', (req, res) => {
   }
 })
 
-
-
-
-
 router.post('/', (req, res) => {
     if(!req.body.pic){
       //default pic if one is not provided
@@ -69,6 +65,33 @@ router.post('/', (req, res) => {
     }
     places.push(req.body)
     res.redirect('/places')
+})
+
+router.put('/:id', (req, res) => {
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+      res.render('error404')
+  }
+  else if (!places[id]) {
+      res.render('error404')
+  }
+  else {
+      // Dig into req.body and make sure data is valid
+      if (!req.body.pic) {
+          // Default image if one is not provided
+          req.body.pic = 'http://placekitten.com/400/400'
+      }
+      if (!req.body.city) {
+          req.body.city = ''
+      }
+      if (!req.body.state) {
+          req.body.state = 'USA'
+      }
+
+      // Save the new data into places[id]
+      places[id] = req.body
+      res.redirect(`/places/${id}`)
+  }
 })
 
 module.exports = router
