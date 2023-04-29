@@ -13,19 +13,19 @@ function edit_form(data) {
           </div>
           <div className="form-group">
             <label htmlFor="pic">Place Picture</label>
-            <input className="form-control" id="pic" name="pic" value={data.place.pic} />
+            <input className="form-control" id="pic" name="pic" value={data.place.pic} required/>
           </div>
           <div className="form-group">
             <label htmlFor="city">City</label>
-            <input className="form-control" id="city" name="city" value={data.place.city}/>
+            <input className="form-control" id="city" name="city" value={data.place.city} required/>
           </div>
           <div className="form-group">
             <label htmlFor="state">State</label>
-            <input className="form-control" id="state" name="state" value={data.place.state}/>
+            <input className="form-control" id="state" name="state" value={data.place.state} required/>
           </div>
           <div className="form-group">
             <label htmlFor="cuisines">Cuisines</label>
-            <input className="form-control" id="state" name="state" value={data.place.cuisines}/>
+            <input className="form-control" id="state" name="state" value={data.place.cuisines} required/>
           </div>
           <input className="btn btn-primary" type="submit" value="Add Place" />
         </form>
