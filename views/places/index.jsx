@@ -21,7 +21,6 @@ function index (data) {
     )
   })
   
-  
   return (
     <Def>
         <main>
@@ -34,5 +33,4 @@ function index (data) {
   )
 }
 
-  
 module.exports = index
